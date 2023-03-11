@@ -1,0 +1,519 @@
+/* ---------RESETS----- */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: #2b2b2b;
+  font-family: adobe-clean, Source Sans Pro, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* --------- GRID---------- */
+
+.container {
+  max-width: 140rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* HEADER */
+.header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.header .container {
+  padding: 0 1rem;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+.header__brand {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 5rem;
+}
+.header__brand img {
+  width: 3rem;
+}
+.header__brand h2 {
+  font-size: 2rem;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__nav ul li {
+  place-self: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.header__nav ul li:hover {
+  background-color: rgba(224, 224, 224, 0.224);
+}
+
+.header__nav ul li a {
+  color: #000;
+}
+.header__nav ul li a span {
+  margin-right: 1rem;
+}
+
+.header__nav ul li:last-child {
+  display: none;
+}
+
+.header__right {
+  display: flex;
+  align-self: center;
+}
+.header__right img {
+  cursor: pointer;
+}
+.header__right a {
+  padding: 2rem;
+  color: #000;
+}
+.header__right a:hover i {
+  color: blue;
+}
+.header__right a:hover {
+  color: blue;
+}
+
+.toggle__menu {
+  display: none;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.toggle__menu span {
+  display: block;
+  width: 4rem;
+  height: 5px;
+  margin: 5px 0;
+  border-radius: 3rem;
+  background-color: #000;
+  transition: 0.5s ease-in-out;
+}
+
+.toggle__menu.open span:first-child {
+  transform: translateY(8px) rotate(225deg);
+}
+
+.toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle__menu.open span:last-child {
+  transform: translateY(-12px) rotate(-225deg);
+}
+
+@media screen and (max-width: 70rem) {
+  .header__nav {
+    justify-content: flex-end;
+  }
+  .toggle__menu {
+    display: block;
+  }
+  .header__nav.open ul {
+    left: 0;
+  }
+  .header__nav ul {
+    display: block;
+    position: absolute;
+    background: #fff;
+    top: 6rem;
+    width: 100%;
+    height: 100vh;
+    left: -1000rem;
+    transition: 0.5s ease-in-out;
+  }
+  .header__nav ul li a {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Banner */
+
+.banner {
+  padding-top: 20rem;
+  height: calc(100vh);
+}
+
+.banner__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner__text {
+  max-width: 50rem;
+}
+
+.banner__text h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.banner__text p {
+  margin: 1rem 0;
+}
+
+.banner__buttons {
+  margin-top: 2rem;
+}
+.banner__buttons a {
+  font-size: 1.5rem;
+}
+.banner__buttons a:first-child {
+  margin-right: 2rem;
+  font-weight: bold;
+}
+.banner__buttons a:last-child {
+  color: #000;
+}
+.banner__buttons a:last-child:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 70rem) {
+  .banner {
+    padding-top: 8rem;
+  }
+  .banner__wrapper {
+    flex-direction: column-reverse;
+  }
+  .banner__text {
+    padding: 4rem 0;
+  }
+  .banner__text h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .banner__text p {
+    text-align: justify;
+  }
+  .banner__buttons {
+    text-align: center;
+  }
+}
+
+/* user */
+.user {
+  border-top: 1px solid #505050;
+  border-bottom: 1px solid #505050;
+  padding: 1rem 0;
+}
+
+.user__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user__wrapper h4 {
+  font-weight: bold;
+  font-size: clamp(1.6rem, 6vw, 1.8rem);
+}
+
+.user__buttons a {
+  font-size: 1.4rem;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 50rem) {
+  .user__buttons a {
+    margin: unset;
+  }
+}
+
+@media screen and (max-width: 70rem) {
+  .user__wrapper {
+    flex-direction: column;
+  }
+}
+
+/* FEATURES */
+
+.features__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.features__item {
+  padding: 3rem;
+}
+
+.features__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  height: 50rem;
+}
+
+.features .features__item:nth-child(1) {
+  background-image: url("./img/PS-campaign-homepage-single-desktop_v6.jpg");
+}
+
+.features .features__item:nth-child(2) {
+  background-image: url("./img/AX-2022-single-desktop-v2.jpg");
+}
+
+.features__item {
+  cursor: pointer;
+}
+
+.features__item h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.features__item p {
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.features__item a {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.features__item img {
+  display: block;
+  margin: 0 auto;
+}
+.features__item a:hover {
+  text-decoration: underline;
+}
+.features__options {
+  padding: 2rem;
+  background-color: #9797fc;
+  max-height: 50rem;
+}
+.features__options h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+}
+.features__options ul li {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.features__options ul {
+  margin-bottom: 1rem;
+}
+.features__options ul li:hover a {
+  text-decoration: underline;
+}
+.features__options ul li a {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.features2__wrapper {
+  display: grid;
+  grid-template-columns: 2.05fr 1fr;
+  grid-gap: 2rem;
+}
+.features2 .features__item:nth-child(1) {
+  background-image: url("./img/Premiere-Pro-double-desktop.jpg");
+}
+.features2 .features__item:nth-child(2) {
+  background-image: url("./img/Homepage.Acrobat_powerhouse_pod.background.420x500.jpg.img.jpg");
+}
+@media screen and (max-width: 70rem) {
+  .features__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .features__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .features2__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .features__item img {
+    width: 40rem;
+  }
+}
+/* BANNER2 */
+.banner2 {
+  background-image: url("./img/acrobats-got-it-2023-triple-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  height: 70rem;
+}
+
+.banner2__wrapper {
+}
+
+.banner2__wrapper img {
+  width: 21rem;
+}
+
+/* REPEATABLE PATTERNS */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+}
+
+.btn--primary {
+  background-color: #1473e6;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #0b4081e3;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #505050;
+  border: 2px solid #505050;
+}
+
+.btn--outline:hover {
+  background-color: #505050;
+  color: #fff;
+}

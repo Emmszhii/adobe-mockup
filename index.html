@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adobe mockup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="header__brand">
+            <img src="./img/logo.svg" alt="" />
+            <h2>Adobe</h2>
+          </div>
+          <div class="header__nav">
+            <ul>
+              <li>
+                <a href="#"
+                  ><span>Creativity & Design</span>
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span>PDF & E-Signatures</span
+                  ><i class="fas fa-chevron-down"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span>Marketing & Commerce</span>
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span>Help & Support</span>
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+              </li>
+              <li>
+                <input type="text" /><img src="./img/vector2.svg" alt="" />
+              </li>
+            </ul>
+            <div class="header__right">
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <a href="#">Sign in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="container">
+        <div class="banner__wrapper">
+          <div class="banner__text">
+            <h1>New in Creative Cloud.</h1>
+            <p>
+              Create faster with new AI features in Illustrator, Premiere Pro,
+              and Lightroom. Collaborate with Share for Review in Photoshop and
+              Illustrator. Make standout content quickly with Adobe Express. And
+              design for the future with new 3D tools.
+            </p>
+            <div class="banner__buttons">
+              <a href="#" class="btn btn--primary">Start free trial</a>
+              <a href="#">Explore Creative Cloud</a>
+            </div>
+          </div>
+          <div class="banner__img">
+            <img src="./img/banner.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="user">
+      <div class="container">
+        <div class="user__wrapper">
+          <h4>Creative Cloud for:</h4>
+
+          <div class="user__buttons">
+            <a href="#" class="btn btn--outline">Individuals</a>
+            <a href="#" class="btn btn--outline">Students & Teachers</a>
+            <a href="#" class="btn btn--outline">Business</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features__wrapper">
+          <div class="features__item">
+            <h3>Everyone can. Photoshop.</h3>
+            <p>
+              Blur. Layer. Colorize. Swap. Combine. Blend. With Photoshop,
+              everyone can.
+            </p>
+            <a href="#">Get to know Photoshop</a>
+          </div>
+          <div class="features__item">
+            <h3>Adobe Express.</h3>
+            <p>
+              Quickly and easily make standout content. No credit card required.
+            </p>
+            <a href="#">Get Adobe Express free</a>
+          </div>
+          <div class="features__options">
+            <div class="features__options__section">
+              <h4>Explore our creative apps</h4>
+              <ul>
+                <li><a href="#">Creative Cloud All Apps free trial</a></li>
+                <li><a href="#">See plans and pricing</a></li>
+              </ul>
+            </div>
+            <div class="features__options__section">
+              <h4>See what you can do</h4>
+              <ul>
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Graphic design</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">UI and UX</a></li>
+                <li><a href="#">3D and AR</a></li>
+                <li><a href="#">Social media</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="features2">
+      <div class="container">
+        <div class="features2__wrapper">
+          <div class="features__item">
+            <h3>Everyone can. Photoshop.</h3>
+            <p>
+              Blur. Layer. Colorize. Swap. Combine. Blend. With Photoshop,
+              everyone can.
+            </p>
+            <a href="#">Get to know Photoshop</a>
+          </div>
+          <div class="features__item">
+            <div class="features__item__text">
+              <h3>Get it done with Acrobat.</h3>
+              <p>
+                Edit, share, and e-sign all of your PDFs — all in one place.
+              </p>
+              <a href="#">Start free trial</a>
+            </div>
+
+            <img
+              src="./img/homepage-CC-sm-pod-DC-e-sign-overlay-new-art20V2.png.img.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="banner2">
+      <div class="container">
+        <div class="banner2__wrapper">
+          <img
+            src="./img/Adobe_DocumentCloud_Product_AcrobatPro_Horizontal_Lockup_White_RGB.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const headerNav = document.querySelector(".header__nav");
+      const toggleMenu = document.querySelector(".toggle__menu");
+
+      toggleMenu.addEventListener("click", () => {
+        headerNav.classList.toggle("open");
+        toggleMenu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
